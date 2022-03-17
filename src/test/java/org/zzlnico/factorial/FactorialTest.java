@@ -1,8 +1,8 @@
 package org.zzlnico.factorial;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,10 +15,12 @@ import static org.junit.jupiter.api.Assertions.*;
  * factorial 3 -> 6
  * factorial negative number -> raises an exception
  */
+
 class FactorialTest {
     private Factorial factorial;
+
     @BeforeEach
-    public void setup(){
+    public void setup() {
         factorial = new Factorial();
     }
 
@@ -26,8 +28,9 @@ class FactorialTest {
     public void finish() {
         factorial = null;
     }
-        
+
     @Test
+    @DisplayName("factorial 0 -> 1")
     public void shouldComputeReturnOneIfTheNumberIsZero() {
         int expectedValue = 1;
         int obtainedValue = factorial.compute(0);
@@ -36,6 +39,7 @@ class FactorialTest {
     }
 
     @Test
+    @DisplayName("factorial 1 -> 1")
     public void shouldComputeReturnOneIfTheNumberIsOne() {
         int expectedValue = 1;
         int obtainedValue = factorial.compute(1);
@@ -44,14 +48,16 @@ class FactorialTest {
     }
 
     @Test
+    @DisplayName("factorial 2 -> 2")
     public void shouldComputeReturnTwoIfTheNumberIsTwo() {
         int expectedValue = 2;
         int obtainedValue = factorial.compute(2);
 
         assertEquals(expectedValue, obtainedValue);
     }
-
+    
     @Test
+    @DisplayName("factorial 3-> 6")
     public void shouldComputeReturnSixIfTheNumberIsThree() {
         int expectedValue = 6;
         int obtainedValue = factorial.compute(3);
@@ -60,6 +66,7 @@ class FactorialTest {
     }
 
     @Test
+    @DisplayName("factorial 6 -> 720")
     public void shouldComputeReturn720IfTheNumberIsSix() {
         int expectedValue = 720;
         int obtainedValue = factorial.compute(6);
@@ -68,6 +75,7 @@ class FactorialTest {
     }
 
     @Test
+    @DisplayName("factorial negative number -> raises an exception")
     public void shouldComputeOfANegativeNumberRaiseAnException() {
         assertThrows(RuntimeException.class, () -> factorial.compute(-1));
     }
