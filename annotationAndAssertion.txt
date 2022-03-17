@@ -1,0 +1,7 @@
+#Assert -> assertNotNull(value,message)
+    *Comprueba que el value no sea nulo y en caso de fallar el "assert", muestra el mensaje de fallo "message".
+
+#Annotation -> @DisplayName(name)
+    *Declara un nombre personalizado "name" de un método prueba o una clase de prueba.
+    *Permite a que el programador entienda mejor lo que hace el test, fíjese que "factorial 0 -> 1" se entiende mejor que
+    "shouldComputeReturnOneIfTheNumberIsZero".
