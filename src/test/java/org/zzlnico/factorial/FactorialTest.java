@@ -33,8 +33,9 @@ class FactorialTest {
     @DisplayName("factorial 0 -> 1")
     public void shouldComputeReturnOneIfTheNumberIsZero() {
         int expectedValue = 1;
-        int obtainedValue = factorial.compute(0);
+        Integer obtainedValue = factorial.compute(0);
 
+        assertNotNull(obtainedValue, "The actual value is null");
         assertEquals(expectedValue, obtainedValue);
     }
 
@@ -42,8 +43,9 @@ class FactorialTest {
     @DisplayName("factorial 1 -> 1")
     public void shouldComputeReturnOneIfTheNumberIsOne() {
         int expectedValue = 1;
-        int obtainedValue = factorial.compute(1);
+        Integer obtainedValue = factorial.compute(1);
 
+        assertNotNull(obtainedValue, "The actual value is null");
         assertEquals(expectedValue, obtainedValue);
     }
 
@@ -51,8 +53,9 @@ class FactorialTest {
     @DisplayName("factorial 2 -> 2")
     public void shouldComputeReturnTwoIfTheNumberIsTwo() {
         int expectedValue = 2;
-        int obtainedValue = factorial.compute(2);
+        Integer obtainedValue = factorial.compute(2);
 
+        assertNotNull(obtainedValue, "The actual value is null");
         assertEquals(expectedValue, obtainedValue);
     }
     
@@ -60,8 +63,9 @@ class FactorialTest {
     @DisplayName("factorial 3-> 6")
     public void shouldComputeReturnSixIfTheNumberIsThree() {
         int expectedValue = 6;
-        int obtainedValue = factorial.compute(3);
+        Integer obtainedValue = factorial.compute(3);
 
+        assertNotNull(obtainedValue, "The actual value is null");
         assertEquals(expectedValue, obtainedValue);
     }
 
@@ -69,8 +73,9 @@ class FactorialTest {
     @DisplayName("factorial 6 -> 720")
     public void shouldComputeReturn720IfTheNumberIsSix() {
         int expectedValue = 720;
-        int obtainedValue = factorial.compute(6);
+        Integer obtainedValue = factorial.compute(6);
 
+        assertNotNull(obtainedValue, "The actual value is null");
         assertEquals(expectedValue, obtainedValue);
     }
 
